@@ -238,6 +238,9 @@ if (__DARWIN__) {
 async function handleCommandLineArguments(argv: string[]) {
   const args = parseCommandLineArgs(argv)
 
+  // TODO(@shiftkey): review command line argument handling and test locally, confirming things work as expected
+  // TODO(@shiftkey): see if we can convert this area to use args shape
+
   // Desktop registers it's protocol handler callback on Windows as
   // `[executable path] --protocol-launcher "%1"`. Note that extra command
   // line arguments might be added by Chromium
@@ -245,6 +248,18 @@ async function handleCommandLineArguments(argv: string[]) {
   if (__WIN32__ && typeof args['protocol-launcher'] === 'string') {
     handleAppURL(args['protocol-launcher'])
     return
+  } else if (__LINUX__) {
+    // we expect this call to have several parameters before the URL we want,
+    // so we should filter out the program name as well as any parameters that
+    // look like arguments to Electron
+    const argsWithoutParameters = argv.filter(
+      a => !a.endsWith('github-desktop') && !a.startsWith('--')
+    )
+    if (argsWithoutParameters.length > 0) {
+      handleAppURL(argsWithoutParameters[0])
+    }
+  } else if (args.length > 1) {
+    handleAppURL(args[1])
   }
 
   if (typeof args['cli-open'] === 'string') {
