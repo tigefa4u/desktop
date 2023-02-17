@@ -150,7 +150,7 @@ if (__WIN32__ && process.argv.length > 1) {
   }
 }
 
-if (!handlingSquirrelEvent) {
+if (__LINUX__ && process.argv.length > 1) {
   handleCommandLineArguments(process.argv)
 }
 
