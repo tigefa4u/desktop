@@ -17,3 +17,4 @@ vendor/windows-argv-parser/build/
 junit*.xml
 *.swp
 tslint-rules/
+script/release_notes.txt
