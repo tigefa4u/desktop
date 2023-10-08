@@ -95,6 +95,7 @@ export enum PopupType {
   PullRequestComment = 'PullRequestComment',
   UnknownAuthors = 'UnknownAuthors',
   TestIcons = 'TestIcons',
+  ConfirmRestart = 'ConfirmRestart',
 }
 
 interface IBasePopup {
@@ -423,5 +424,6 @@ export type PopupDetail =
   | {
       type: PopupType.TestIcons
     }
+  | { type: PopupType.ConfirmRestart }
 
 export type Popup = IBasePopup & PopupDetail
