@@ -153,6 +153,10 @@ jobs:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
           submodules: recursive
+      - uses: actions/setup-python@v4
+        if: matrix.friendlyName != 'Ubuntu'
+        with:
+          python-version: '3.11'
       - name: Use Node.js ${{ matrix.node }}
         if: matrix.friendlyName != 'Ubuntu'
         uses: actions/setup-node@v3
