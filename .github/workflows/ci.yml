@@ -206,7 +206,7 @@ jobs:
         run: yarn run package
         if: ${{ matrix.friendlyName == 'Ubuntu' }}
       - name: Upload output artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: matrix.friendlyName == 'Ubuntu'
         with:
           name: ${{ matrix.friendlyName }}-${{ matrix.arch }}-artifacts
