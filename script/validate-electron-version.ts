@@ -15,8 +15,8 @@ type ChannelToValidate = 'production' | 'beta'
  * to a previous version of GitHub Desktop without losing all settings.
  */
 const ValidElectronVersions: Record<ChannelToValidate, string> = {
-  production: '28.2.9',
-  beta: '28.2.9',
+  production: '28.3.3',
+  beta: '28.3.3',
 }
 
 const channel =
