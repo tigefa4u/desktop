@@ -355,6 +355,8 @@ These editors are currently supported:
  - [JetBrains WebStorm](https://www.jetbrains.com/webstorm/)
  - [Emacs](https://www.gnu.org/software/emacs/)
  - [Pulsar](https://pulsar-edit.dev/)
+ - [Pluma](https://github.com/mate-desktop/pluma)
+ - [Zed](https://github.com/zed-industries/zed)
 
 These are defined in a list at the top of the file:
 
