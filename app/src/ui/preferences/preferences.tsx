@@ -828,7 +828,7 @@ export class Preferences extends React.Component<
     )
 
     await dispatcher.setTitleBarStyle(this.state.titleBarStyle)
-    
+
     await dispatcher.setUncommittedChangesStrategySetting(
       this.state.uncommittedChangesStrategy
     )
