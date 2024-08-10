@@ -5,9 +5,11 @@ on:
     branches:
       - development
       - linux
+      - 'linux-release-*'
   pull_request:
     branches:
       - linux
+      - 'linux-release-*'
   workflow_call:
     inputs:
       repository:
