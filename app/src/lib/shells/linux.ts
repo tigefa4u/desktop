@@ -27,6 +27,7 @@ export enum Shell {
   Kitty = 'Kitty',
   LXTerminal = 'LXDE Terminal',
   Warp = 'Warp',
+  BlackBox = 'Black Box',
 }
 
 export const Default = Shell.Gnome
@@ -73,6 +74,8 @@ function getShellPath(shell: Shell): Promise<string | null> {
       return getPathIfAvailable('/usr/bin/lxterminal')
     case Shell.Warp:
       return getPathIfAvailable('/usr/bin/warp-terminal')
+    case Shell.BlackBox:
+      return getPathIfAvailable('/usr/bin/blackbox-terminal')
     default:
       return assertNever(shell, `Unknown shell: ${shell}`)
   }
@@ -98,6 +101,7 @@ export async function getAvailableShells(): Promise<
     kittyPath,
     lxterminalPath,
     warpPath,
+    blackBoxPath,
   ] = await Promise.all([
     getShellPath(Shell.Gnome),
     getShellPath(Shell.GnomeConsole),
@@ -115,6 +119,7 @@ export async function getAvailableShells(): Promise<
     getShellPath(Shell.Kitty),
     getShellPath(Shell.LXTerminal),
     getShellPath(Shell.Warp),
+    getShellPath(Shell.BlackBox),
   ])
 
   const shells: Array<FoundShell<Shell>> = []
@@ -182,6 +187,10 @@ export async function getAvailableShells(): Promise<
     shells.push({ shell: Shell.Warp, path: warpPath })
   }
 
+  if (blackBoxPath) {
+    shells.push({ shell: Shell.BlackBox, path: blackBoxPath })
+  }
+
   return shells
 }
 
@@ -198,6 +207,7 @@ export function launch(
     case Shell.Terminator:
     case Shell.XFCE:
     case Shell.Alacritty:
+    case Shell.BlackBox:
       return spawn(foundShell.path, ['--working-directory', path])
     case Shell.Urxvt:
       return spawn(foundShell.path, ['-cd', path])
