@@ -2236,6 +2236,13 @@ agent-base@6, agent-base@^6.0.2:
   dependencies:
     debug "4"
 
+agent-base@^7.0.2, agent-base@^7.1.0:
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-7.1.1.tgz#bdbded7dfb096b751a2a087eeeb9664725b2e317"
+  integrity sha512-H0TSyFNDMomMNJQBn8wFV5YC/2eJ+VXECwOadZJT554xP6cODZHPX3H9QMQECxvrgiSOP1pHjy1sMWQVYJOUOA==
+  dependencies:
+    debug "^4.3.4"
+
 agentkeepalive@^4.2.1:
   version "4.5.0"
   resolved "https://registry.yarnpkg.com/agentkeepalive/-/agentkeepalive-4.5.0.tgz#2673ad1389b3c418c5a20c5d7364f93ca04be923"
@@ -2428,10 +2435,10 @@ app-builder-bin@5.0.0-alpha.10:
   resolved "https://registry.yarnpkg.com/app-builder-bin/-/app-builder-bin-5.0.0-alpha.10.tgz#cf12e593b6b847fb9d04027fa755c6c6610d778b"
   integrity sha512-Ev4jj3D7Bo+O0GPD2NMvJl+PGiBAfS7pUGawntBNpCbxtpncfUixqFj9z9Jme7V7s3LBGqsWZZP54fxBX3JKJw==
 
-app-builder-lib@25.1.7:
-  version "25.1.7"
-  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-25.1.7.tgz#f8ce8e2edc6d91becbe956b1205da1f3849cafe9"
-  integrity sha512-JxmN+D/Dn7BLQoN+cTFO+zbMHcpI10v/xjyjFO1FKpHbApOG+OQt/xUyVjKWp4FYplIfuHdpxqTXo1PN/Wzm/A==
+app-builder-lib@25.1.8:
+  version "25.1.8"
+  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-25.1.8.tgz#ae376039c5f269c7d562af494a087e5bc6310f1b"
+  integrity sha512-pCqe7dfsQFBABC1jeKZXQWhGcCPF3rPCXDdfqVKjIeWBcXzyC1iOWZdfFhGl+S9MyE/k//DFmC6FzuGAUudNDg==
   dependencies:
     "@develar/schema-utils" "~2.6.5"
     "@electron/notarize" "2.5.0"
@@ -3791,12 +3798,12 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
-dmg-builder@25.1.7:
-  version "25.1.7"
-  resolved "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-25.1.7.tgz#a3bb8e1dc790faec04503568480db80f5077a2cb"
-  integrity sha512-Hac0AfXQrAV62JT99Had6bvUJb/f7vjJTaLOsmA/gAQcrc/cLmNAqCJ0ZZDqwKy2+LKXnxx45TvMXvovKd4iMg==
+dmg-builder@25.1.8:
+  version "25.1.8"
+  resolved "https://registry.yarnpkg.com/dmg-builder/-/dmg-builder-25.1.8.tgz#41f3b725edd896156e891016a44129e1bd580430"
+  integrity sha512-NoXo6Liy2heSklTI5OIZbCgXC1RzrDQsZkeEwXhdOro3FT1VBOvbubvscdPnjVuQ4AMwwv61oaH96AbiYg9EnQ==
   dependencies:
-    app-builder-lib "25.1.7"
+    app-builder-lib "25.1.8"
     builder-util "25.1.7"
     builder-util-runtime "9.2.10"
     fs-extra "^10.1.0"
@@ -3924,16 +3931,16 @@ ejs@^3.1.8:
   dependencies:
     jake "^10.8.5"
 
-electron-builder@^25.1.7:
-  version "25.1.7"
-  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-25.1.7.tgz#b3d1504925a4d3693d97c76c0d2f2906613ffe4b"
-  integrity sha512-lsKtX93GSHWnmuteNRvBzgJIjRiiYB0qrJVRjShwBi75Ns+mRdWeOGZiXItqOWj+3g5UyY722kgoq2WlqCB87A==
+electron-builder@^25.1.8:
+  version "25.1.8"
+  resolved "https://registry.yarnpkg.com/electron-builder/-/electron-builder-25.1.8.tgz#b0e310f1600787610bb84c3f39bc7aadb2548486"
+  integrity sha512-poRgAtUHHOnlzZnc9PK4nzG53xh74wj2Jy7jkTrqZ0MWPoHGh1M2+C//hGeYdA+4K8w4yiVCNYoLXF7ySj2Wig==
   dependencies:
-    app-builder-lib "25.1.7"
+    app-builder-lib "25.1.8"
     builder-util "25.1.7"
     builder-util-runtime "9.2.10"
     chalk "^4.1.2"
-    dmg-builder "25.1.7"
+    dmg-builder "25.1.8"
     fs-extra "^10.1.0"
     is-ci "^3.0.0"
     lazy-val "^1.0.5"
@@ -5664,6 +5671,14 @@ http-proxy-agent@^5.0.0:
     agent-base "6"
     debug "4"
 
+http-proxy-agent@^7.0.0:
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz#9a8b1f246866c028509486585f62b8f2c18c270e"
+  integrity sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==
+  dependencies:
+    agent-base "^7.1.0"
+    debug "^4.3.4"
+
 http2-wrapper@^1.0.0-beta.5.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/http2-wrapper/-/http2-wrapper-1.0.3.tgz#b8f55e0c1f25d4ebd08b3b0c2c079f9590800b3d"
@@ -5678,6 +5693,14 @@ https-proxy-agent@^5.0.0, https-proxy-agent@^5.0.1:
   integrity sha512-dFcAjpTQFgoLMzC2VwU+C/CbS7uRL0lWmxDITmqm7C+7F0Odmj6s9l6alZc6AELXhrnggM2CeWSXHGOdX2YtwA==
   dependencies:
     agent-base "6"
+    debug "4"
+
+https-proxy-agent@^7.0.0:
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-7.0.5.tgz#9e8b5013873299e11fab6fd548405da2d6c602b2"
+  integrity sha512-1e4Wqeblerz+tMKPIq2EMGiiWW1dIjZOksyHWSUm1rmuvw/how9hBHZ38lAGj5ID4Ik6EdkOw7NmWPy6LAwalw==
+  dependencies:
+    agent-base "^7.0.2"
     debug "4"
 
 human-signals@^2.1.0:
