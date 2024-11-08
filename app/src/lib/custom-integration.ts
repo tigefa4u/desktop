@@ -1,5 +1,4 @@
 import { ChildProcess, SpawnOptions, spawn } from 'child_process'
-import { parseCommandLineArgv } from 'windows-argv-parser'
 import stringArgv from 'string-argv'
 import { promisify } from 'util'
 import { exec } from 'child_process'
@@ -29,7 +28,7 @@ export interface ICustomIntegration {
 export function parseCustomIntegrationArguments(
   args: string
 ): ReadonlyArray<string> {
-  return __WIN32__ ? parseCommandLineArgv(args) : stringArgv(args)
+  return stringArgv(args)
 }
 
 // Function to retrieve, on macOS, the bundleId of an app given its path
