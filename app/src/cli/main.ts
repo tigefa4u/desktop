@@ -16,8 +16,9 @@ const run = (...args: Array<string>) => {
   } else if (process.platform === 'win32') {
     const exeName = `GitHubDesktop${__DEV__ ? '-dev' : ''}.exe`
     execFile(join(__dirname, `../../${exeName}`), args, cb)
-  } else {
-    throw new Error('Unsupported platform')
+  } else if (process.platform === 'linux') {
+    const exeName = `github-desktop${__DEV__ ? '-dev' : ''}`
+    execFile(join(__dirname, `../../${exeName}`), args, cb)
   }
 }
 
