@@ -8,7 +8,7 @@ on:
 jobs:
   label_issues:
     # pull_request.head.label = {owner}:{branch}
-    if: startsWith(github.event.pull_request.head.label, 'desktop:') == false
+    if: startsWith(github.event.pull_request.head.label, 'shiftkey:') == false
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
