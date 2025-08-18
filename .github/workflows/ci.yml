@@ -54,7 +54,7 @@ jobs:
     env:
       RELEASE_CHANNEL: ${{ inputs.environment }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
@@ -89,7 +89,7 @@ jobs:
     env:
       RELEASE_CHANNEL: ${{ inputs.environment }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           repository: ${{ inputs.repository || github.repository }}
           ref: ${{ inputs.ref }}
